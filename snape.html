@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Zagadka Snape'a</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="snape_style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="snape_script.js"></script>
+</head>
+
+<body>
+    <nav class="navbar justify-content-end sticky-top">
+        <a class="nav-item mx-1" href="https://rlabedzki.github.io/">Powrót</a>
+        <span id="menu_rules" class="nav-item mx-1">Zasady</span>
+    </nav>
+    <header>Zagadka Snape'a</header>
+    <aside class="fire_right">
+        <div class="flames"></div>
+        <div class="flames"></div>
+        <div class="flames"></div>
+        <div class="flames"></div>
+        <div class="torch"></div>
+    </aside>
+    <aside class="fire_left">
+        <div class="flames"></div>
+        <div class="flames"></div>
+        <div class="flames"></div>
+        <div class="flames"></div>
+        <div class="torch"></div>
+    </aside>
+    <main>
+        <section id="introduction">
+            <div class="border-bottom">
+                <p>Hello!</p>
+                <p>This page was created purely as an exercise in HTML, CSS and JavaScript.</p>
+                <p>After this point all content will be in Polish.</p>
+                <p>If you would prefer to go back please use "Powrót" in the menu at the top.</p>
+            </div>
+            <div class="border-bottom">
+                <br/>
+                <p>Cześć!</p>
+                <p>Ta strona została stworzona wyłącznie w celu ćwiczenia HTML, CSS i JavaScript.</p>
+                <p>Od teraz wszystko już będzie po polsku.</p>
+            </div>
+            <br/>
+            <button id="into_ok" class="btn btn-light">OK!</button>
+        </section>
+        <section id="rules">
+            <p>Znajdujesz się przed stołem z siedmioma napojami ustawionymi w rzędzie.</p>
+            <p>Zadanie polega na wybraniu tego, który pozwoli pójść dalej.</p>
+            <p>Jeden z napojów pozwala na powrót.</p>
+            <p>Zagadka ta ma kilka losowo generowanych wariantów i jest rozwinięciem nierozwiązywalnej jednoznacznie zagadki profesora Snape'a z ksiązki
+                <br/>"Harry Potter i Kamień Filozoficzny"</p>
+            <br/>
+            <button id="rules_ok" class="btn btn-light">OK!</button>
+        </section>
+        <section id="clues">
+            <p>Groza czycha przed wami, a bezpieczna droga za wami,</br>
+                Dwie z nas wam pomoga, żadna nie omami,</br>
+                Jedna z siedmiu pozwoli pójść dalej przed siebie,</br>
+                Inna pozwoli wrócic temu, który jest w potrzebie,</br>
+                Dwie z nas kryją zacne wino pokrzywowe,</br>
+                Trzy trucizne wsączą w serce oraz w głowe.</br>
+                Wybieraj, jeśli nie chcesz cierpieć tutaj wiecznie,</br>
+                Oto wskazowki, jak przejść bezpiecznie:
+            </p>
+            <p>Pierwsza: jakkolwiek chytrze trucizna się skrywa,</br>
+                Zawsze znajdziesz jakąś z lewej strony tego, co dała pokrzywa;
+            </p>
+            <p>Druga: różną mają zawartość butelki ostatnie,</br>
+                Lecz jeśli chcesz iść naprzod, nie pij płynu z żadnej;
+            </p>
+            <p>Trzecia: obie drugie od końca smak podobny mają,</br>
+                Choć wyglądem całkiem się nie przypominają;
+            </p>
+        </section>
+        <section id="additional_clues"></section>
+        <section id="question">
+            <p>Licząc od lewej, który eliksir wypijesz?</p>
+            <select id="number" class="custom-select">
+				<option value="1">Pierwszy</option>
+				<option value="2">Drugi</option>
+				<option value="3">Trzeci</option>
+				<option value="4">Czwarty</option>
+				<option value="5">Piąty</option>
+				<option value="6">Szósty</option>
+				<option value="7">Siódmy</option>
+			</select>
+            <button id="drink" class="btn btn-light">Wypij!</button>
+        </section>
+        <section id="result"></section>
+        <button id="reroll" class="btn btn-light my-2">Przelosuj zagadkę</button>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+body {
+    text-align: center;
+    background-color: black;
+    background-image: linear-gradient(to right, black, rgb(65, 65, 65), black);
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+
+nav,
+a,
+a:hover {
+    color: gray;
+}
+
+#menu_rules:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+header {
+    font-size: 30px;
+    width: 35%;
+    margin: auto;
+}
+
+main {
+    width: 40%;
+    padding: 20px;
+    margin: auto;
+}
+
+#rules,
+#clues,
+#additional_clues,
+#result,
+#reroll {
+    display: none;
+}
+
+#question {
+    width: 100%;
+    margin: auto;
+    display: none;
+}
+
+#number {
+    width: 70%;
+}
+
+.fire_right {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    height: 5vw;
+    width: 5vw;
+}
+
+.fire_left {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    height: 5vw;
+    width: 5vw;
+}
+
+.flames {
+    position: absolute;
+    bottom: 0px;
+    transform: rotate(60deg);
+    border-radius: 10%;
+}
+
+.flames:nth-child(2n) {
+    animation-name: flameodd;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.flames:nth-child(2n+1) {
+    animation-name: flameeven;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.flames:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.flames:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.flames:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.flames:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+.torch {
+    position: absolute;
+    top: 80%;
+    border-top: 3vw solid rgb(90, 47, 47);
+    border-left: 2vw solid transparent;
+    border-right: 2vw solid transparent;
+    border-radius: 10%;
+    width: 6vw;
+    z-index: 100;
+}
+
+@keyframes flameeven {
+    0%,
+    100% {
+        width: 0%;
+        height: 0%;
+    }
+    25% {
+        width: 100%;
+        height: 100%;
+        right: 1%;
+        bottom: 2%;
+    }
+    0% {
+        background-color: yellow;
+        z-index: 10;
+        right: 0%;
+        bottom: 0%;
+    }
+    40% {
+        background-color: orange;
+        z-index: 10;
+    }
+    100% {
+        background-color: red;
+        z-index: -10;
+        bottom: 120%;
+        right: 150%;
+    }
+}
+
+@keyframes flameodd {
+    0%,
+    100% {
+        width: 0%;
+        height: 0%;
+    }
+    25% {
+        width: 100%;
+        height: 100%;
+        right: 1%;
+        bottom: 2%;
+    }
+    0% {
+        background-color: yellow;
+        z-index: 10;
+        right: 0%;
+        bottom: 0%;
+    }
+    40% {
+        background-color: orange;
+        z-index: 10;
+    }
+    100% {
+        background-color: red;
+        z-index: -10;
+        right: 120%;
+        bottom: 150%;
+    }
+}
